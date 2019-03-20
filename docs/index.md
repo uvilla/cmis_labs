@@ -4,7 +4,7 @@ layout: default
 use_math: false
 ---
 
-This page collects the *Jupyter notebook* used for the graduate course on **Computational Methods in Imaging Science**, taught by Dr. Ghattas at Washington University in the Spring 2019 semester.
+This page collects the *Jupyter notebook* used for the graduate course on **Computational Methods in Imaging Science**, taught by Dr. Villa at Washington University in the Spring 2019 semester.
 
 ### hIPPYlib (Inverse Problems Python library)
 
