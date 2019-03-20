@@ -1,0 +1,183 @@
+%% NSF allows 10pt Arial, but that violates the reviewers' 8th
+%% amendment rights 
+\documentclass[11pt]{article}
+
+%\usepackage{times}
+% \usepackage{newcent}
+%% FONTS
+%% To get the default sans serif font in latex, uncomment following line:
+\renewcommand*\familydefault{\sfdefault}
+%%
+%% to get Arial font as the sans serif font, uncomment following line:
+%\renewcommand{\sfdefault}{phv} % phv is the Arial font
+%%
+%% to get Helvetica font as the sans serif font, uncomment following line:
+%% \usepackage{helvet}
+\usepackage{wrapfig}
+
+%% the natbib package works better than cite 
+\usepackage[square,numbers,sort&compress]{natbib}
+
+\usepackage{color}
+
+\usepackage[small,bf,up]{caption}
+\renewcommand{\captionfont}{\footnotesize}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{graphics,epsfig,graphicx,float,subfigure,color}
+\usepackage{algorithm,algorithmic}
+\usepackage{amsmath,amssymb,amsbsy,amsfonts,amsthm}
+%% \usepackage{subsec}
+\usepackage{comment}
+\usepackage{url}
+\usepackage{boxedminipage}
+\usepackage[sf,bf,small]{titlesec}
+%% \usepackage[textsize=footnotesize]{todonotes}
+
+% see documentation for titlesec package
+% \titleformat{\section}{\large \sffamily \bfseries}
+\titlelabel{\thetitle.\,\,\,}
+
+%% as a last resort, if we're short on space: 
+%% \renewcommand{\baselinestretch}{0.99}
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}}
+
+\newcommand{\zapspace}{\topsep=0pt\partopsep=0pt\itemsep=0pt\parskip=0pt}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+
+% \addtolength{\oddsidemargin}{-1.0in}%{-0.75in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\headsep}{-0.75in}
+% \addtolength{\textheight}{2.0in}
+
+% \setlength{\textheight}{9.0in}
+% \setlength{\textwidth}{6.5in}
+% \setlength{\parskip}{1ex}
+% \setlength{\parindent}{0em}
+
+\setlength{\emergencystretch}{20pt}
+
+\usepackage{amsmath,amssymb,amsbsy,amsfonts,amsthm,mathrsfs}
+\usepackage{fullpage,subfigure,graphicx,epsfig,url,color}
+\usepackage[plainpages=false, colorlinks=true,
+   citecolor=black, filecolor=black, linkcolor=black,
+   urlcolor=blue]{hyperref}
+
+%\include{ogmacros}
+
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+
+\newcommand{\p}{\partial}
+\newcommand{\bs}{\boldsymbol}
+
+\renewcommand{\matrix}[1]{\ensuremath{\boldsymbol{#1}}}
+\newcommand{\K}{\ensuremath{\matrix{K}}}
+\newcommand{\F}{\ensuremath{\matrix{F}}}
+
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\large \textsf{%%
+Spring 2019:\\
+Computational Methods in Imaging Science\\
+BME 493/593 \\[1mm]
+\textbf{Getting started with FEniCS}}
+\end{center}
+
+\section{FEniCS overview}
+
+FEniCS is a powerful, open-source suite of tools for automated
+solution of partial differential equations (PDEs) using finite element (FE) method.
+Part of the power for FEniCS
+is the ease with which one can create FE solvers by describing PDEs
+using weak forms in nearly-mathematical notation. The FEniCS project
+can be found at:
+\url{http://fenicsproject.org/} and comes with an extensive documentation and examples.\\
+
+\noindent FEniCS includes a number of powerful features that include:
+\vspace{-0.1in}
+\begin{itemize}
+\zapspace
+\item[-] Automated solution of variational problems;
+\item[-] Automated error control and adaptivity;
+\item[-] An extensive library of finite elements;
+\item[-] High performance linear algebra through backends to such
+  libraries as PETSc;
+\item[-] Visualization via a simple interactive plotting function, as
+  well as output in VTK format;
+% for visualization in ParaView. 
+\item[-] Python and C++ interfaces;
+\item[-] Extensive documentation (see for instance:
+  \url{https://fenicsproject.org/documentation/}).
+\end{itemize}
+
+\section{FEniCS resources}
+
+The documentation for FEniCS is extensive. Resources include:
+
+\bit 
+ \item[-] {\bf The FEniCS Tutorial.} The book \emph{Solving PDEs in Python: The FEniCS Tutorial Volume I}
+ is the is the perfect guide for new users. The tutorial explains fundamental concepts of the finite element method,
+ FEniCS programming, and demonstrates how to quickly solve a number of PDEs.
+ 
+ The PDF version of the book can be downloaded (legally and for free) from\\
+ \url{https://fenicsproject.org/pub/tutorial/pdf/fenics-tutorial-vol1.pdf}.
+ 
+ Python scripts for all the examples described in the tutorial can be found at\\
+ \url{https://github.com/hplgit/fenics-tutorial/tree/master/pub/python/vol1}
+ 
+ \item[-] {\bf FEniCS Demos.} These documented demonstration programs are
+   a great way to learn the different features in FEniCS.  They come
+   already packaged in FEniCS when you install it and are available on-line at:\\
+{\small \url{https://fenics.readthedocs.io/projects/dolfin/en/2017.2.0/demos.html} }.
+
+\item[-] {\bf Quick Programmer's References.} Some of the classes and
+  functions in DOLFIN are more frequently used than others. The Python
+  implementations are described in\\
+{\small \url{https://fenicsproject.org/olddocs/dolfin/2017.2.0/python/quick_reference.html} }.
+
+\item[-] {\bf Complete Programmer's References.} If you need more details on a particular class or function,
+you can also consult the Complete Programmer's References at\\
+{\footnotesize \url{https://fenicsproject.org/olddocs/dolfin/2017.2.0/python/programmers-reference/index.html} }.
+
+\item[-] {\bf Getting Help.} See: \url{https://fenicsproject.org/community/}
+
+\eit
+
+Other resources, although a little outdated and not fully compatible
+with the latest versions of FEniCS, include:
+
+\bit
+\item[-] {\bf The FEniCS Book:} All 732 pages of the FEniCS book ({\em
+  Automated Solution of Differential Equations by the Finite Element
+  Method}) can be downloaded (legally!) from here:\\
+{\footnotesize \url{http://launchpad.net/fenics-book/trunk/final/+download/fenics-book-2011-10-27-final.pdf}}.\\
+%
+This is the comprehensive reference to FEniCS, along with many
+examples of the applications of FEniCS to problems in science and
+engineering. You will notice that the first chapter of the book is
+just the FEniCS Tutorial (with some minor editorial differences).
+
+\item[-] {\bf The FEniCS Manual.} This is a 200-page excerpt from the
+  FEniCS Book, including the FEniCS Tutorial, an introduction to the
+  finite element method, and documentation of DOLFIN and UFL:\\
+%
+{\small \url{http://launchpad.net/fenics-book/trunk/final/+download/fenics-manual-2011-10-31.pdf}}.\\
+%
+Since it's an excerpt from the FEniCS Book, you probably won't need
+it. 
+
+
+\eit
+
+
+\end{document}
+

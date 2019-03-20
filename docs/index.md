@@ -17,21 +17,15 @@ for scalable and efficient linear algebra operations and solvers.
 
 - The teaching material consists of cloud-based interactive tutorials that mix instruction and theory with editable and runnable code. You can run the codes presented in class through your web browser. This will allow anyone to test our software and experiment with inverse problem algorithms quite easily, without running into installation issues or version discrepancies. Instructions to connect to the cloud resources, username and password will be posted on Canvas. Please do not exchange the user info.
 
-- If you are curious to learn more about PDEs, finite element methods, and FEniCS, the fastest way to start learning this tool is to download and read the first chapter of the FEniCS book from here. Note the updated/new FEniCS tutorial version here. For more detailed instructions, please check out the ‘‘Getting started with FEniCS’’ document available here.
+- If you are curious to learn more about PDEs, finite element methods, and FEniCS, the fastest way to start learning this tool is to download and read the first chapter of the FEniCS book from here. Note the updated/new FEniCS tutorial version here. For more detailed instructions, please check out the ‘‘Getting started with FEniCS’’ document available [here](files/fenics_getting_started.pdf).
+
+- For instructions on how to use Jupyter notebooks check out this [page](https://jupyter.readthedocs.io/en/latest/running.html#running).
 
 ### Teaching material
 
 - Boundary Value Problems in FEniCS:
 
 - Image denoising using Tikhonov regularization
-
-
-
-### Instructions
-
-See [here](fenics_getting_started.pdf) for a list of introductory material to FEniCS and installation guidelines.
-
-See [here](https://jupyter.readthedocs.io/en/latest/running.html#running) for instructions on how to use jupyther notebooks (files *.ipynb).
 
 
 ### Acknowledgement
