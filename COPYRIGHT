@@ -1,0 +1,44 @@
+# Copyright (c) 2019, Washington University in St. Louis.
+#
+# All Rights reserved.
+# See file COPYRIGHT for details.
+#
+# This file is part of cmis_labs, the teaching material for the S2019 BME 493/593 course on 
+# Computational Methods in Imaging Science at Washington University in St. Louis. 
+#
+# cmis_labs is free software; you can redistribute it and/or modify it under the
+# terms of the GNU General Public License (as published by the Free
+# Software Foundation) version 2.0 dated June 1991.
+
+COPYRIGHT
+
+The following copyright applies to each file in the cmis_labs
+distribution, unless otherwise stated in the file:
+
+Copyright (c) 2019, Washington University in St. Louis.
+
+LICENSE
+
+cmis_labs is a free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License (as published by the
+Free Software Foundation) version 2.0 dated June 1991.
+
+cmis_labs is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the IMPLIED WARRANTY OF
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the terms
+and conditions of the GNU Lesser General Public License for more
+details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library (file LICENSE); if not, write to the
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+Boston, MA 02110-1301 USA.
+
+
+CONTACT INFORMATION
+
+Please see
+
+            https://uvilla.github.io/cmis_labs
+
+for more information and source code availability.
