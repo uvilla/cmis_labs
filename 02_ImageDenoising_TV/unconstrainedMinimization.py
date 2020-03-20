@@ -1,17 +1,15 @@
-# Copyright (c) 2016-2018, The University of Texas at Austin 
-# & University of California, Merced.
+# Copyright &copy; 2019-2020, Washington University in St. Louis.
 #
 # All Rights reserved.
 # See file COPYRIGHT for details.
 #
-# This file is part of the hIPPYlib library. For more information and source code
-# availability see https://hippylib.github.io.
+# This file is part of **cmis_labs**, the teaching material for  ESE 5932 *Computational Methods for Imaging Science*
+# at Washington University in St. Louis. Please see  https://uvilla.github.io/cmis_labs
+# for more information and source code availability.
 #
-# hIPPYlib is free software; you can redistribute it and/or modify it under the
-# terms of the GNU General Public License (as published by the Free
-# Software Foundation) version 3.0 dated June 2007.
-
-from __future__ import print_function, division, absolute_import
+# We would like to acknowledge the Extreme Science and Engineering Discovery Environment (XSEDE),
+# which is supported by National Science Foundation grant number ACI-1548562,
+# for providing cloud computing resources (Jetstream) for this course through allocation TG-SEE190001.
 
 import dolfin as dl
 import math
@@ -67,10 +65,6 @@ class InexactNewtonCG:
         self.final_grad_norm = 0
 
     def solve(self, J, grad, H, m):
-
-            
-            
-        
         
         rtol          = self.parameters["rel_tolerance"]
         atol          = self.parameters["abs_tolerance"]
