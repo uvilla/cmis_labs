@@ -4,7 +4,7 @@ layout: default
 use_math: false
 ---
 
-This page collects the *Jupyter notebook* used for the graduate course on **Computational Methods in Imaging Science**, taught by Dr. Villa at Washington University in the Spring 2019 semester.
+This page collects the *Jupyter notebook* used for the graduate course on **Computational Methods for Imaging Science**, taught by Dr. Villa at Washington University in the Spring 2020 semester.
 
 ### hIPPYlib (Inverse Problems Python library)
 
@@ -23,10 +23,15 @@ for scalable and efficient linear algebra operations and solvers.
 
 ### Teaching material
 
-- Boundary Value Problems in FEniCS:
+- Boundary Value Problems in FEniCS
 
-- Image denoising using Tikhonov regularization
+- Image denoising 
 
+- Constrained inverse problems
+
+- Analysis of the spectrum of the Hessian of inverse problem
+
+- Bayesian solution of inverse problems
 
 ### Acknowledgement
 

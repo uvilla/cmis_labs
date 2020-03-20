@@ -1,18 +1,7 @@
-%% NSF allows 10pt Arial, but that violates the reviewers' 8th
-%% amendment rights 
 \documentclass[11pt]{article}
 
-%\usepackage{times}
-% \usepackage{newcent}
-%% FONTS
-%% To get the default sans serif font in latex, uncomment following line:
 \renewcommand*\familydefault{\sfdefault}
-%%
-%% to get Arial font as the sans serif font, uncomment following line:
-%\renewcommand{\sfdefault}{phv} % phv is the Arial font
-%%
-%% to get Helvetica font as the sans serif font, uncomment following line:
-%% \usepackage{helvet}
+
 \usepackage{wrapfig}
 
 %% the natbib package works better than cite 
@@ -26,34 +15,22 @@
 \usepackage{graphics,epsfig,graphicx,float,subfigure,color}
 \usepackage{algorithm,algorithmic}
 \usepackage{amsmath,amssymb,amsbsy,amsfonts,amsthm}
-%% \usepackage{subsec}
+
 \usepackage{comment}
 \usepackage{url}
 \usepackage{boxedminipage}
 \usepackage[sf,bf,small]{titlesec}
-%% \usepackage[textsize=footnotesize]{todonotes}
 
-% see documentation for titlesec package
-% \titleformat{\section}{\large \sffamily \bfseries}
+
 \titlelabel{\thetitle.\,\,\,}
 
-%% as a last resort, if we're short on space: 
-%% \renewcommand{\baselinestretch}{0.99}
 \newcommand{\bit}{\begin{itemize}}
 \newcommand{\eit}{\end{itemize}}
 
 \newcommand{\zapspace}{\topsep=0pt\partopsep=0pt\itemsep=0pt\parskip=0pt}
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
 
-% \addtolength{\oddsidemargin}{-1.0in}%{-0.75in}
-% \addtolength{\textwidth}{1.75in}
-% \addtolength{\headsep}{-0.75in}
-% \addtolength{\textheight}{2.0in}
 
-% \setlength{\textheight}{9.0in}
-% \setlength{\textwidth}{6.5in}
-% \setlength{\parskip}{1ex}
-% \setlength{\parindent}{0em}
 
 \setlength{\emergencystretch}{20pt}
 
@@ -86,9 +63,9 @@
 
 \begin{center}
 \large \textsf{%%
-Spring 2019:\\
-Computational Methods in Imaging Science\\
-BME 493/593 \\[1mm]
+Spring 2020:\\
+Computational Methodsfor Imaging Science\\
+ESE 5932 \\[1mm]
 \textbf{Getting started with FEniCS}}
 \end{center}
 
@@ -137,21 +114,18 @@ The documentation for FEniCS is extensive. Resources include:
  \item[-] {\bf FEniCS Demos.} These documented demonstration programs are
    a great way to learn the different features in FEniCS.  They come
    already packaged in FEniCS when you install it and are available on-line at:\\
-{\small \url{https://fenics.readthedocs.io/projects/dolfin/en/2017.2.0/demos.html} }.
+{\small \url{https://fenicsproject.org/docs/dolfin/latest/python/demos.html} }.
 
-\item[-] {\bf Quick Programmer's References.} Some of the classes and
+\item[-] {\bf Programmer's References.} Some of the classes and
   functions in DOLFIN are more frequently used than others. The Python
   implementations are described in\\
-{\small \url{https://fenicsproject.org/olddocs/dolfin/2017.2.0/python/quick_reference.html} }.
+{\small \url{https://fenicsproject.org/docs/dolfin/latest/python/api.html} }.
 
-\item[-] {\bf Complete Programmer's References.} If you need more details on a particular class or function,
-you can also consult the Complete Programmer's References at\\
-{\footnotesize \url{https://fenicsproject.org/olddocs/dolfin/2017.2.0/python/programmers-reference/index.html} }.
 
 \item[-] {\bf Getting Help.} See: \url{https://fenicsproject.org/community/}
 
 \eit
-
+\newpage
 Other resources, although a little outdated and not fully compatible
 with the latest versions of FEniCS, include:
 
