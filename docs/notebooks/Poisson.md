@@ -16,7 +16,7 @@ u = u_D & \text{on} \; \Gamma_D, \\
 Here, $$\Gamma_D \subset \Omega$$ denotes the part of the boundary where we prescribe Dirichlet boundary conditions, and $$\Gamma_N \subset \Omega$$ denotes the part of the boundary where we prescribe Neumann boundary conditions. $$\boldsymbol{n}$$ denotes the unit normal of $$\partial \Omega$$ pointing outside $$\Omega$$. 
 
 To obtain the weak form we define the functional spaces $$V_{u_D} := \left\{ u \in H^1(\Omega) \, |\, u = u_D \text{ on } \Gamma_D \right\}$$ and $$V_{0} := \left\{ u \in H^1(\Omega) \, |\, u = 0 \text{ on } \Gamma_D \right\}$$.
-Then we multiply the strong form by an arbitrary function $v \in V_0$ and integrate over $$\Omega$$:
+Then we multiply the strong form by an arbitrary function $$v \in V_0$$ and integrate over $$\Omega$$:
 
 $$ - \int_\Omega \Delta u \, v \, dx = \int_\Omega f\,v \, dx, \quad \forall v \in V_0. $$
 
@@ -30,9 +30,9 @@ Find $$u \in V_{u_D}$$:
 
 $$ \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f\,v \, dx + \int_{\Gamma_N} g\,v\,ds, \quad \forall v \in V_0. $$
 
-To obtain the finite element discretization we then introduce a triangulation (mesh) $\mathcal{T}_h$ of the domain $\Omega$ and we define a finite dimensional subspace $V_h \subset H^1(\Omega)$ consisting of globally continuous functions that are piecewise polynomial on each element of $\mathcal{T}_h$.
+To obtain the finite element discretization we then introduce a triangulation (mesh) $$\mathcal{T}_h$$ of the domain $$\Omega$$ and we define a finite dimensional subspace $$V_h \subset H^1(\Omega)$$ consisting of globally continuous functions that are piecewise polynomial on each element of $$\mathcal{T}_h$$.
 
-By letting $$V_{h, u_D} := \{ v_h \in V_h \,|\, v_h = u_D \text{ on } \Gamma_D\}$ and $V_{h, 0} := \{ v_h \in V_h \,|\, v_h = 0 \text{ on } \Gamma_D\}$$, the finite element method then reads:
+By letting $$V_{h, u_D} := \{ v_h \in V_h \,|\, v_h = u_D \text{ on } \Gamma_D\}$$ and $$V_{h, 0} := \{ v_h \in V_h \,|\, v_h = 0 \text{ on } \Gamma_D\}$$, the finite element method then reads:
 
 Find $$u_h \in V_{h, u_D}$$ such that:
 
