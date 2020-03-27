@@ -32,7 +32,7 @@ $$ \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f\,v \, dx + \int_{\G
 
 To obtain the finite element discretization we then introduce a triangulation (mesh) $$\mathcal{T}_h$$ of the domain $$\Omega$$ and we define a finite dimensional subspace $$V_h \subset H^1(\Omega)$$ consisting of globally continuous functions that are piecewise polynomial on each element of $$\mathcal{T}_h$$.
 
-By letting $$V_{h, u_D} := \{ v_h \in V_h \,|\, v_h = u_D \text{ on } \Gamma_D\}$$ and $$V_{h, 0} := \{ v_h \in V_h \,|\, v_h = 0 \text{ on } \Gamma_D\}$$, the finite element method then reads:
+By letting $$V_{h, u_D} := \{ v_h \in V_h: \, v_h = u_D \text{ on } \Gamma_D\}$$ and $$V_{h, 0} := \{ v_h \in V_h: v_h = 0 \text{ on } \Gamma_D\}$$, the finite element method then reads:
 
 Find $$u_h \in V_{h, u_D}$$ such that:
 
