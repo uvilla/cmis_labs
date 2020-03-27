@@ -2,7 +2,7 @@ docs_list_title: Menu
 docs:
 
 - title: CMIS Labs
-  url: index.html
+  url: /cmis_labs
 
 - title: hIPPYlib
   url: https://hippylib.github.io
