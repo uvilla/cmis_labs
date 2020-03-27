@@ -23,16 +23,25 @@ for scalable and efficient linear algebra operations and solvers.
 
 ### Teaching material
 
-- Boundary Value Problems in FEniCS
+- Boundary Value Problems in FEniCS: [notebook](notebooks/Poisson.html), [recorded demonstration](https://wustl.box.com/s/5p8dvrxde5o6o6mvhak6t3odsoiz0yqq)
 
-- Image denoising 
+- Image denoising:
+  - Tikhonov regularization: [notebook](notebooks/ImageDenoising_Tik.html), [recorded demonstration](https://wustl.box.com/s/w99ausfyconctd5a6mchx7rtm5y5j5dj)
+  - Total Variation regularization: [notebook](notebooks/ImageDenoising_TV.html), [recorded demonstration](https://wustl.box.com/s/625hd84dpt493rcyap3y35wbakkdr329)
+  - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), recorded demonstration
 
-- Constrained inverse problems
+- Constrained inverse problems:
+  - Steepest descent: notebook, recorded demonstration
+  - Inexact Newton Conjugate Gradient: notebook, recorded demonstration
 
-- Analysis of the spectrum of the Hessian of inverse problem
+- Analysis of the spectrum of the Hessian of inverse problem: notebook, recorded demonstration
 
-- Bayesian solution of inverse problems
+- Bayesian solution of inverse problems:
+  - Gaussian random fields: notebook, recorded demonstration
+  - Sampling high-dimensional posterior distributions: notebook, recorded demonstration
 
 ### Acknowledgement
 
-We would like to acknowledge the Extreme Science and Engineering Discovery Environment (XSEDE), which is supported by National Science Foundation grant number ACI-1548562, for providing cloud computing resources (Jetstream) for this course through allocation TG-SEE190001.
+We would like to acknowledge the Extreme Science and Engineering Discovery Environment (XSEDE), which is supported by National Science Foundation grant ACI-1548562, for providing cloud computing resources (Jetstream) for this course through allocation TG-SEE190001.
+
+hIPPYlib development is partially supported by National Science Foundation grants ACI-1550593 and ACI-1550547.
