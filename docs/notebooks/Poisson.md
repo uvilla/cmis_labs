@@ -38,7 +38,7 @@ Find $$u_h \in V_{h, u_D}$$ such that:
 
 $$ \int_\Omega \nabla u_h \cdot \nabla v_h \, dx = \int_\Omega f\,v_h \, dx + \int_{\Gamma_N} g\,v_h\,ds, \quad \forall v_h \in V_{h,0}. $$
 
-In what follow, we will let $$\Omega := [0,1]\times[0,1]$$ be the unit square, $$\Gamma_N := \{ (x,y) \in \partial\Omega \,|\, y = 1\}$$ be the top boundary, and $$\Gamma_D := \partial\Omega \setminus \Gamma_N$$ be the union of the left, bottom, and right boundaries.
+In what follow, we will let $$\Omega := [0,1]\times[0,1]$$ be the unit square, $$\Gamma_N := \{ (x,y) \in \partial\Omega: \, y = 1\}$$ be the top boundary, and $$\Gamma_D := \partial\Omega \setminus \Gamma_N$$ be the union of the left, bottom, and right boundaries.
 
 The coefficient $$f$$, $$g$$, $$u_D$$ are chosen such that the analytical solution is $$u_{ex} = e^{\pi y} \sin(\pi x)$$.
 
