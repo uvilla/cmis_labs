@@ -28,7 +28,7 @@ for scalable and efficient linear algebra operations and solvers.
 - Image denoising:
   - Tikhonov regularization: [notebook](notebooks/ImageDenoising_Tik.html), [recorded demonstration](https://wustl.box.com/s/w99ausfyconctd5a6mchx7rtm5y5j5dj)
   - Total Variation regularization: [notebook](notebooks/ImageDenoising_TV.html), [recorded demonstration](https://wustl.box.com/s/625hd84dpt493rcyap3y35wbakkdr329)
-  - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), recorded demonstration
+  - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), [recorded demonstration](https://wustl.box.com/s/zed8kxh34pcaq5ia4suqjjxom4moa6za)
 
 - Constrained inverse problems:
   - Steepest descent: notebook, recorded demonstration
