@@ -4,15 +4,19 @@ We present the Primal-dual Newton's method to solver the Total Variation denoisi
 
 $$ \min_{m \in \mathcal{M}} J(m) = \min_{m} \int_\Omega (m -d)^2 d{\boldsymbol{x}} + \alpha \int_\Omega |\nabla m |_\beta d{\boldsymbol{x}}, $$
 
-where $d = d({\boldsymbol{x}})$ is the data (noisy image), $\alpha > 0$ is the regularization parameter, and $|\nabla m|_\beta = \sqrt{\|\nabla m^2\| + \beta}$ with $\beta > 0$ leads to a differentiable approximation of the TV functional.
+where $$d = d({\boldsymbol{x}})$$ is the data (noisy image), $$\alpha > 0$$ is the regularization parameter, and 
+
+$$|\nabla m|_\beta = \sqrt{\|\nabla m^2\| + \beta}$$
+
+with $$\beta > 0$$ leads to a differentiable approximation of the TV functional.
 
 The variational formulation of the first order optimality conditions reads
 
-*Find $m \in \mathcal{M}$ such that:* 
+*Find $$m \in \mathcal{M}$$ such that:* 
 
 $$ \int_\Omega ( m - d)\tilde{m} d{\boldsymbol{x}} + \alpha \int_\Omega \frac{\nabla m \cdot \nabla\tilde{m}}{|\nabla m|_\beta} d{\boldsymbol{x}} = 0 \quad \forall \tilde{m} \in \mathcal{M}. $$
 
-By standard techniques, we can show that if $m$ is smooth enough the above variational form is equivalent to solving the boundary value problem
+By standard techniques, we can show that if $$m$$ is smooth enough the above variational form is equivalent to solving the boundary value problem
 
 $$
 \left\{
@@ -22,13 +26,15 @@ $$
 \end{array}
 \right.
 $$
-where ${\boldsymbol n}$ is the unit outward normal vector to $\partial\Omega$.
+where $${\boldsymbol n}$$ is the unit outward normal vector to $$\partial\Omega$$.
 
 A key observation is that the nonlinearity in the term
-$$ \boldsymbol{w} = \frac{\nabla m}{| \nabla m |_\beta} $$
-is the cause of the slow convergence of the Newton's method, althought the variable $\boldsymbol{w}$ itself is usually smooth since it represents the unit normal vector to the level sets of $m$.
 
-The primal-dual Newton's method then explicitly introduce the variable $\boldsymbol{w}$ in the first optimality conditions leading to the system of equations
+$$ \boldsymbol{w} = \frac{\nabla m}{| \nabla m |_\beta} $$
+
+is the cause of the slow convergence of the Newton's method, althought the variable $$\boldsymbol{w}$$ itself is usually smooth since it represents the unit normal vector to the level sets of $$m$$.
+
+The primal-dual Newton's method then explicitly introduce the variable $$\boldsymbol{w}$$ in the first optimality conditions leading to the system of equations
 
 $$
 \left\{
@@ -38,9 +44,10 @@ $$
 \end{array}
 \right.
 $$
-equipped with the boundary conditions $\nabla m \cdot \boldsymbol{n} = \boldsymbol{w} \cdot \boldsymbol{n} = 0$ on $\partial \Omega$.
 
-In the primal-dual method, the Newton direction $(\hat{m}_k, \boldsymbol{\hat{w}}_k)$ is obtained by linearizing the system of nonlinear equation around a point $(m_k, \boldsymbol{w}_k)$ and solving
+equipped with the boundary conditions $$\nabla m \cdot \boldsymbol{n} = \boldsymbol{w} \cdot \boldsymbol{n} = 0$$ on $$\partial \Omega$$.
+
+In the primal-dual method, the Newton direction $$(\hat{m}_k, \boldsymbol{\hat{w}}_k)$$ is obtained by linearizing the system of nonlinear equation around a point $$(m_k, \boldsymbol{w}_k)$$ and solving
 
 $$
 \begin{bmatrix}
@@ -60,7 +67,7 @@ $$
 m_{k+1} = m_{k} + \alpha_m \hat{m}_k, \quad \boldsymbol{w}_{k+1} = \boldsymbol{w}_k +\alpha_w \boldsymbol{\hat{w}}_k,
 $$ 
 
-where $\alpha_m$ is chosen to ensure sufficient descent of $J(m)$ and $\alpha_w$ is chosen to ensure $\boldsymbol{w}_{k+1} \cdot \boldsymbol{w}_{k+1} \leq 1$.
+where $$\alpha_m$$ is chosen to ensure sufficient descent of $$J(m)$$ and $$\alpha_w$$ is chosen to ensure $$\boldsymbol{w}_{k+1} \cdot \boldsymbol{w}_{k+1} \leq 1$$.
 
 
 
@@ -160,20 +167,24 @@ plt.show()
 The class `PDTVDenosing` defines the cost functional and its first & second variations for the primal dual formulation of the Total Variation denoising problem.
 
 Specifically, the method `cost` implements the cost functional
-$$ \mathcal{J}(m) = \frac{1}{2}\int_\Omega (m - d)^2 \; d\boldsymbol{x} + \alpha\int_\Omega | \nabla m |_\beta d\boldsymbol{x}, $$
-where $\alpha$ is the amount of regularization and $\beta$ is a small pertubation to ensure differentiability of the total variation functional.
 
-The method `grad_m` implements the first variation of $\mathcal{J}$ w.r.t. $m$
+$$ \mathcal{J}(m) = \frac{1}{2}\int_\Omega (m - d)^2 \; d\boldsymbol{x} + \alpha\int_\Omega | \nabla m |_\beta d\boldsymbol{x}, $$
+
+where $$\alpha$$ is the amount of regularization and $$\beta$$ is a small pertubation to ensure differentiability of the total variation functional.
+
+The method `grad_m` implements the first variation of $$\mathcal{J}$$ w.r.t. $$m$$
+
 $$ \delta_m \mathcal{J}(m, \tilde{m}) = \int_\Omega (m - d)\tilde{m}  \; d\boldsymbol{x} + \alpha \int_\Omega \frac{1}{| \nabla m |_\beta}\nabla m \cdot \nabla \tilde{m}  d\boldsymbol{x}. $$
 
-The method `Hessian` implements the action of primal-dual second variation of $\mathcal{J}$ w.r.t. $m$ in the direction $\hat{m}$:
+The method `Hessian` implements the action of primal-dual second variation of $$\mathcal{J}$$ w.r.t. $$m$$ in the direction $$\hat{m}$$:
+
 $$ \int_\Omega \tilde{m} \hat{m} \; d\boldsymbol{x} + \alpha \int_\Omega \frac{1}{| \nabla m |_\beta} \left[ \left( I - A(m,w)\right) \nabla \tilde{m}\right] \cdot \nabla \hat{m} d\boldsymbol{x}, $$
 
 where 
 
 $$ A(m,w) = \frac{1}{2} \boldsymbol{w} \otimes \frac{\nabla m}{|\nabla m|_\beta} + \frac{1}{2} \frac{\nabla m}{|\nabla m|_\beta}\otimes \boldsymbol{w}. $$
 
-Finaly, the method `compute_w_hat` computes the primal dual Newton update for $\boldsymbol{w}$,
+Finaly, the method `compute_w_hat` computes the primal dual Newton update for $$\boldsymbol{w}$$,
 
 $$ \hat{\boldsymbol{w}} = \frac{1}{|\nabla m|_\beta}\left(I - A(m,w) \right)\nabla \hat{m} - \boldsymbol{w} + \frac{\nabla m}{|\nabla m|_\beta}. $$
 
@@ -241,11 +252,11 @@ class PDTVDenoising:
 
 The `PDNewton` function computes the primal dual solution of the total variation regularized denoising problem using the inexact Newton conjugate gradient algorithm with:
 
-- Eisenstat-Walker conditions to reduce the number of conjugate gradient iterations necessary to compute the Newton'direction $\hat{m}$.
+- Eisenstat-Walker conditions to reduce the number of conjugate gradient iterations necessary to compute the Newton'direction $$\hat{m}$$.
 
-- Backtracking linesearch on $m_{k+1}$ based on Armijo's sufficient descent condition
+- Backtracking linesearch on $$m_{k+1}$$ based on Armijo's sufficient descent condition
 
-- Backtracking linesearch on $\boldsymbol{w}_{k+1}$ to ensure $\boldsymbol{w}_{k+1} \cdot \boldsymbol{w}_{k+1} \leq 1$.
+- Backtracking linesearch on $$\boldsymbol{w}_{k+1}$$ to ensure $$\boldsymbol{w}_{k+1} \cdot \boldsymbol{w}_{k+1} \leq 1$$.
 
 
 ```python
