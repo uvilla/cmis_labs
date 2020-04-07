@@ -31,10 +31,9 @@ for scalable and efficient linear algebra operations and solvers.
   - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), [recorded demonstration](https://wustl.box.com/s/zed8kxh34pcaq5ia4suqjjxom4moa6za)
 
 - Constrained inverse problems:
-  - Steepest descent: notebook, recorded demonstration
-  - Inexact Newton Conjugate Gradient: notebook, recorded demonstration
-
-- Analysis of the spectrum of the Hessian of inverse problem: notebook, recorded demonstration
+  - Steepest descent: [notebook](notebooks/Poisson_SD.html), [recorded demonstration](https://wustl.box.com/s/39y6f7x4dgb2i574euadoipcjr9339ty)
+  - Inexact Newton Conjugate Gradient: [notebook](notebooks/Poisson_INCG.html),recorded demonstration
+  - Analysis of the spectrum of the Hessian of inverse problem: notebook, recorded demonstration
 
 - Bayesian solution of inverse problems:
   - Gaussian random fields: notebook, recorded demonstration
