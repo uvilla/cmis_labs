@@ -3,14 +3,14 @@
 We consider the estimation of a coefficient in an elliptic partial
 differential equation as a model problem. Depending on the interpretation of the unknowns and the type of measurements, this model problem arises, for instance, in electrical impedence tomography.
 
-Let $\Omega\subset\mathbb{R}^n$, $n\in\{1,2,3\}$ be an open, bounded
+Let $$\Omega\subset\mathbb{R}^n$$, $$n\in\{1,2,3\}$$ be an open, bounded
 domain and consider the following problem:
 
 $$
 \min_{m} J(m):=\frac{1}{2}\int_\Omega (u-d)^2\, dx + \frac{\gamma}{2}\int_\Omega |\nabla m|^2\,dx,
 $$
 
-where $u$ is the solution of
+where $$u$$ is the solution of
 
 $$
 \begin{split}
@@ -19,17 +19,17 @@ e^m \nabla u &= j \text{ on }\partial\Omega.
 \end{split}
 $$
 
-Here $m\in \mathcal{M}:=\{m\in H^1(\Omega) \bigcap L^{\infty}(\Omega)\}$ denotes the unknown coefficient field, $u \in \mathcal{V}:= \left\{v \in H^1(\Omega) | v(\boldsymbol{x}_c) = 0 \text{ for a given point } \boldsymbol{x}_c\in \Omega \right\}$ the state variable, $d$ the (possibly noisy) data, $j\in H^{-1/2}(\partial\Omega)$ a given boundary force, and $\gamma\ge 0$ the regularization parameter.
+Here $$m\in \mathcal{M}:=\{m\in H^1(\Omega) \bigcap L^{\infty}(\Omega)\}$$ denotes the unknown coefficient field, $$u \in \mathcal{V}:= \left\{v \in H^1(\Omega) | v(\boldsymbol{x}_c) = 0 \text{ for a given point } \boldsymbol{x}_c\in \Omega \right\}$$ the state variable, $$d$$ the (possibly noisy) data, $$j\in H^{-1/2}(\partial\Omega)$$ a given boundary force, and $$\gamma\ge 0$$ the regularization parameter.
 
 ### The variational (or weak) form of the state equation:
 
-Find $u\in \mathcal{V}$ such that 
+Find $$u\in \mathcal{V}$$ such that 
 
 $$ \int_{\Omega}e^m \nabla u \cdot \nabla \tilde{p} \, dx - \int_{\partial \Omega} j \tilde{p} \,dx = 0, \text{ for all } \tilde{p} \in \mathcal{V}.$$
 
 ### Gradient evaluation:
 
-The Lagrangian functional $\mathscr{L}: \mathcal{V} \times \mathcal{M} \times \mathcal{V} \rightarrow \mathbb{R}$ is given by
+The Lagrangian functional $$\mathscr{L}: \mathcal{V} \times \mathcal{M} \times \mathcal{V} \rightarrow \mathbb{R}$$ is given by
 
 $$
 \mathscr{L}(u,m,p):= \frac{1}{2}\int_{\Omega}(u-u_d)^2 dx +
@@ -37,26 +37,26 @@ $$
 - \int_{\partial \Omega} j\,p\, dx.
 $$
 
-Then the gradient of the cost functional $\mathcal{J}(m)$ with respect to the parameter $m$ is
+Then the gradient of the cost functional $$\mathcal{J}(m)$$ with respect to the parameter $$m$$ is
 
 $$
     (\mathcal{G}(m), \tilde m) := (\mathscr{L}_m(u,m,p),\tilde{m}) = \gamma \int_\Omega \nabla m \cdot \nabla \tilde{m}\, dx +
      \int_\Omega \tilde{m}e^m\nabla u \cdot \nabla p\, dx \quad \forall \tilde{m} \in \mathcal{M},
 $$
 
-where $u \in \mathcal{V}$ is the solution of the forward problem,
+where $$u \in \mathcal{V}$$ is the solution of the forward problem,
 
 $$ (\mathscr{L}_p(u,m,p), \tilde{p})  := \int_{\Omega}e^m\nabla u \cdot \nabla \tilde{p}\, dx - \int_{\partial\Omega} j\,\tilde{p}\, dx = 0
 \quad \forall \tilde{p} \in \mathcal{V}, $$
 
-and $p \in \mathcal{V}$ is the solution of the adjoint problem,
+and $$p \in \mathcal{V}$$ is the solution of the adjoint problem,
 
 $$ (\mathscr{L}_u(u,m,p), \tilde{u}) := \int_{\Omega} e^m\nabla p \cdot \nabla \tilde{u}\, dx + \int_{\Omega} (u-d)\tilde{u}\,dx = 0
 \quad \forall \tilde{u} \in \mathcal{V}.$$
 
 ### Hessian action:
 
-To evaluate the action $\mathcal{H}(m)(\hat{m})$ of the Hessian is a given direction $\hat{m}$ , we consider variations of the meta-Lagrangian functional
+To evaluate the action $$\mathcal{H}(m)(\hat{m})$$ of the Hessian is a given direction $$\hat{m}$$ , we consider variations of the meta-Lagrangian functional
 
 $$
 \begin{aligned}
@@ -67,7 +67,7 @@ $$
 \end{aligned}
 $$
 
-Then action of the Hessian is a given direction $\hat{m}$ is
+Then action of the Hessian is a given direction $$\hat{m}$$ is
 
 $$
 \begin{aligned}
@@ -79,41 +79,41 @@ $$
 
 where 
 
-- $u\in \mathcal{V}$ and $p \in \mathcal{V}$ are the solution of the forward and adjoint problem, respectively;
+- $$u\in \mathcal{V}$$ and $$p \in \mathcal{V}$$ are the solution of the forward and adjoint problem, respectively;
 
-- $\hat{u} \in \mathcal{V}$ is the solution of the incremental forward problem,
+- $$\hat{u} \in \mathcal{V}$$ is the solution of the incremental forward problem,
 
 $$
 \left( \mathscr{L}^H_p(u,m,p; \hat{u}, \hat{m}, \hat{p}), \tilde{p}\right) := \int_\Omega e^m \nabla \hat{u} \cdot \nabla \tilde{p} \, dx + \int_\Omega \hat{m} e^m \, \nabla u \cdot \nabla \tilde p\, dx = 0 \quad \forall \tilde{p} \in \mathcal{V};
 $$
 
 
-- and $\hat{p} \in \mathcal{V}$ is the solution of the incremental adjoint problem,
+- and $$\hat{p} \in \mathcal{V}$$ is the solution of the incremental adjoint problem,
 $$
 \left( \mathscr{L}^H_u(u,m,p; \hat{u}, \hat{m}, \hat{p}), \tilde{u}\right) := \int_\Omega \hat{u} \tilde{u}\,dx + \int_\Omega \hat{m} e^m\nabla p \cdot \nabla \tilde{u}\,dx + \int_\Omega e^m \nabla \tilde u \cdot \nabla \hat{p}\,dx = 0 \quad \forall \tilde{u} \in \mathcal{V}.
 $$
 
 ### Inexact Newton-CG:
 
-Written in abstract form, the Newton Method computes an update direction $\hat{m}_k$ by solving the linear system 
+Written in abstract form, the Newton Method computes an update direction $$\hat{m}_k$$ by solving the linear system 
 
 $$
 \left(\tilde{m}, \mathcal{H}(m_k)(\hat{m}_k) \right) = -\left(\tilde{m}, \mathcal{G}(m_k)\right) \quad \forall \tilde{m} \in \mathcal{M},
 $$
 
-where the evaluation of the gradient $\mathcal{G}(m_k)$ involve the solution $u_k$ and $p_k$ of the forward and adjoint problem (respectively) for $m = m_k$.
-Similarly, the Hessian action $\mathcal{H}(m_k)(\hat{m}_k)$ requires to additional solve the incremental forward and adjoint problems.
+where the evaluation of the gradient $$\mathcal{G}(m_k)$$ involve the solution $$u_k$$ and $$p_k$$ of the forward and adjoint problem (respectively) for $$m = m_k$$.
+Similarly, the Hessian action $$\mathcal{H}(m_k)(\hat{m}_k)$$ requires to additional solve the incremental forward and adjoint problems.
 
 ### Discrete Newton system:
-$
+$$
 \def\tu{\tilde u}
 \def\tm{\tilde m}
 \def\tp{\tilde p}
 \def\hu{\hat u}
 \def\hp{\hat p}
 \def\hm{\hat m}
-$
-$
+$$
+$$
 \def\bu{{\bf u}}
 \def\bm{{\bf m}}
 \def\bp{{\bf p}}
@@ -124,16 +124,16 @@ $
 \def\bhm{{\bf \hat m}}
 \def\bhp{{\bf \hat p}}
 \def\bg{{\bf g}}
-$
-$
+$$
+$$
 \def\bA{{\bf A}}
 \def\bC{{\bf C}}
 \def\bH{{\bf H}}
 \def\bR{{\bf R}}
 \def\bW{{\bf W}}
-$
+$$
 
-Let us denote the vectors corresponding to the discretization of the functions $u_k, m_k, p_k$ by $\bu_k, \bm_k, \bp_k$ and of the functions $\hu_k, \hm_k, \hp_k$ by $\bhu_k, \bhm_k,\bhp_k$.
+Let us denote the vectors corresponding to the discretization of the functions $$u_k, m_k, p_k$$ by $$\bu_k, \bm_k, \bp_k$$ and of the functions $$\hu_k, \hm_k, \hp_k$$ by $$\bhu_k, \bhm_k,\bhp_k$$.
 
 Then, the discretization of the above system is given by the following symmetric linear system:
 
@@ -141,39 +141,39 @@ $$
   \bH_k \, \bhm_k = -\bg_k.
 $$
 
-The gradient $\bg_k$ is computed using the following three steps
+The gradient $$\bg_k$$ is computed using the following three steps
 
-- Given $\bm_k$ we solve the forward problem
+- Given $$\bm_k$$ we solve the forward problem
 
 $$ \bA_k \bu_k = {\bf f}, $$
 
-where $\bA_k \bu_k$ stems from the discretization $(e^{m_k}\nabla u_k, \nabla \tilde{p})$, and ${\bf f}$ stands for the discretization of the right hand side $j$.
+where $$\bA_k \bu_k$$ stems from the discretization $$(e^{m_k}\nabla u_k, \nabla \tilde{p})$$, and $${\bf f}$$ stands for the discretization of the right hand side $$j$$.
 
-- Given $\bm_k$ and $\bu_k$ solve the adjoint problem
+- Given $$\bm_k$$ and $$\bu_k$$ solve the adjoint problem
 
 $$ \bA_k^T \bp_k = - \bW_{\scriptsize\mbox{uu}}\,(\bu_k-\bu_d) $$
 
-where $\bA_k^T \bp_k$ stems from the discretization of $(e^{m_k}\nabla \tilde{u}, \nabla p_k)$, $\bW_{\scriptsize\mbox{uu}}$ is the mass matrix corresponding to the $L^2$ inner product in the state space, and $\bu_d$ stems from the data.
+where $$\bA_k^T \bp_k$$ stems from the discretization of $$(e^{m_k}\nabla \tilde{u}, \nabla p_k)$$, $$\bW_{\scriptsize\mbox{uu}}$$ is the mass matrix corresponding to the $$L^2$$ inner product in the state space, and $$\bu_d$$ stems from the data.
 
 - Define the gradient 
 
 $$ \bg_k = \bR \bm_k + \bC_k^T \bp_k, $$
 
-where $\bR$ is the matrix stemming from discretization of the regularization operator $\gamma ( \nabla \hat{m}, \nabla \tilde{m})$, and $\bC_k$ stems from discretization of the term $(\tilde{m} e^{m_k} \, \nabla u_k, \nabla p_k)$.
+where $$\bR$$ is the matrix stemming from discretization of the regularization operator $$\gamma ( \nabla \hat{m}, \nabla \tilde{m})$$, and $$\bC_k$$ stems from discretization of the term $$(\tilde{m} e^{m_k} \, \nabla u_k, \nabla p_k)$$.
 
-Similarly the action of the Hessian $\bH_k \, \bhm_k$ in a direction $\bhm_k$ (by using the CG algorithm we only need the action of $\bH_k$ to solve the Newton step) is given by
+Similarly the action of the Hessian $$\bH_k \, \bhm_k$$ in a direction $$\bhm_k$$ (by using the CG algorithm we only need the action of $$\bH_k$$ to solve the Newton step) is given by
 
 - Solve the incremental forward problem
 
 $$ \bA_k \bhu_k = -\bC_k \bhm_k, $$
 
-where $\bC_k \bm_k$ stems from discretization of $(\hat{m} e^{m_k} \nabla u_k, \nabla \tilde p)$.
+where $$\bC_k \bm_k$$ stems from discretization of $$(\hat{m} e^{m_k} \nabla u_k, \nabla \tilde p)$$.
 
 - Solve the incremental adjoint problem
 
 $$ \bA_k^T \bhp_k = -(\bW_{\scriptsize\mbox{uu}} \bhu_k + \bW_{\scriptsize\mbox{um}}\,\bhm_k),$$
 
-where $\bW_{\scriptsize\mbox{um}}\,\bhm_k$ stems for the discretization of $(\hat{m}_k e^{m_k}\nabla p_k, \nabla \tilde{u})$.
+where $$\bW_{\scriptsize\mbox{um}}\,\bhm_k$$ stems for the discretization of $$(\hat{m}_k e^{m_k}\nabla p_k, \nabla \tilde{u})$$.
 
 - Define the Hessian action
 
@@ -222,7 +222,7 @@ dl.set_log_active(False)
 
 ### 2. Model set up:
 
-As in the introduction, the first thing we need to do is set up the numerical model.  In this cell, we set the mesh, the finite element functions $u, m, p$ corresponding to state, parameter and adjoint variables, and the corresponding test functions and the parameters for the optimization.
+As in the introduction, the first thing we need to do is set up the numerical model.  In this cell, we set the mesh, the finite element functions $$u, m, p$$ corresponding to state, parameter and adjoint variables, and the corresponding test functions and the parameters for the optimization.
 
 The true parameter ``mtrue`` is the finite element interpolant of the function
 
@@ -281,14 +281,14 @@ bc_adj   = dl.DirichletBC(Vu, dl.Constant(0.), d_boundary, "pointwise")
 
 ### 3. Set up synthetic observations  (inverse crime):
 
-- Propose a coefficient field $m_{\rm true}$ shown above
+- Propose a coefficient field $$m_{\rm true}$$ shown above
 - The variational form of the PDE:
 
-Find $u\in \mathcal{V}$ such that 
+Find $$u\in \mathcal{V}$$ such that 
 
 $$\underbrace{\int_\Omega e^{m_{\text true}} \nabla u \cdot \nabla v \, dx}_{\; := \; a_{\rm true}} - \underbrace{\int_{\partial\Omega} j\,v\,dx}_{\; := \;L_{\rm true}} = 0, \text{ for all } v\in \mathcal{V}$$.
 
-- Perturb the solution: $u = u + \eta$, where $\eta \sim \mathcal{N}(0, \sigma^2)$
+- Perturb the solution: $$u = u + \eta$$, where $$\eta \sim \mathcal{N}(0, \sigma^2)$$
 
 
 ```python
@@ -355,7 +355,7 @@ Specifically,
 - `a_adj`, `L_adj` stand for the bilinear and linear form of the adjoint equation, repectively;
 - `grad_misfit`, `grad_reg` stand for the contributions to the gradient coming from the PDE and the regularization, respectively.
 
-We also build the *mass* matrix $M$ that is used to discretize the $L^2(\Omega)$ inner product.
+We also build the *mass* matrix $$M$$ that is used to discretize the $$L^2(\Omega)$$ inner product.
 
 
 ```python
@@ -407,13 +407,13 @@ plt.show()
 
 We define the following variational forms that are needed for the Hessian evaluation
 
-- `W_varf`, `R_varf` are the second variation of the data-misfit and regularization component of the cost functional respectively (note since `W_varf`, `R_varf` are independent of $u$, $m$, $p$ they can be preassembled);
+- `W_varf`, `R_varf` are the second variation of the data-misfit and regularization component of the cost functional respectively (note since `W_varf`, `R_varf` are independent of $$u$$, $$m$$, $$p$$ they can be preassembled);
 
-- `C_varf` is the second variation of the PDE with respect to $p$ and $m$;
+- `C_varf` is the second variation of the PDE with respect to $$p$$ and $$m$$;
 
-- `Wum_varf` is the second variation of the PDE with respect to $u$ and $m$;
+- `Wum_varf` is the second variation of the PDE with respect to $$u$$ and $$m$$;
 
-- `Wmm_varf` is the second variation of the PDE with respect to $m$.
+- `Wmm_varf` is the second variation of the PDE with respect to $$m$$.
 
 > **Note**: Since the forward problem is linear, the bilinear forms for the incremental state and adjoint equations are the same as the bilinear forms for the state and adjoint equations, respectively.
 
@@ -431,9 +431,9 @@ W = dl.assemble(W_varf)
 R = dl.assemble(R_varf)
 ```
 
-### 8. Hessian action on a vector $\bhm$:
+### 8. Hessian action on a vector $$\bhm$$:
 
-Here we describe how to apply the Hessian operator to a vector $\bhm$. For an opportune choice of the regularization, the Hessian operator evaluated in a neighborhood of the solution is positive define, whereas far from the solution the reduced Hessian may be indefinite. On the constrary, the Gauss-Newton approximation of the Hessian is always positive defined.
+Here we describe how to apply the Hessian operator to a vector $$\bhm$$. For an opportune choice of the regularization, the Hessian operator evaluated in a neighborhood of the solution is positive define, whereas far from the solution the reduced Hessian may be indefinite. On the constrary, the Gauss-Newton approximation of the Hessian is always positive defined.
 
 For this reason, it is beneficial to perform a few initial Gauss-Newton steps (5 in this particular example) to accelerate the convergence of the inexact Newton-CG algorithm.
 
@@ -447,7 +447,7 @@ $$
 \end{align}
 $$
 
-The Gauss-Newton Hessian action is obtained by dropping the second derivatives operators $\bW_{\scriptsize\mbox{um}}\,\bhm$, $\bW_{\scriptsize\mbox{mm}}\bf \bhm$, and $\bW_{\scriptsize\mbox{mu}} \bhu$:
+The Gauss-Newton Hessian action is obtained by dropping the second derivatives operators $$\bW_{\scriptsize\mbox{um}}\,\bhm$$, $$\bW_{\scriptsize\mbox{mm}}\bf \bhm$$, and $$\bW_{\scriptsize\mbox{mu}} \bhu$$:
 $$
 \begin{align}
 \bhu &= -\bA^{-1} \bC \bf \bhm\, & \text{incremental forward}\\
@@ -549,18 +549,18 @@ class HessianOperator():
 
 We solve the constrained optimization problem using the inexact Newton-CG method with Armijo line search.
 
-The stopping criterion is based on a relative reduction of the norm of the gradient (i.e. $\frac{\|g_{n}\|}{\|g_{0}\|} \leq \tau$).
+The stopping criterion is based on a relative reduction of the norm of the gradient (i.e. $$\frac{\|g_{n}\|}{\|g_{0}\|} \leq \tau$$).
 
-First, we compute the gradient by solving the state and adjoint equation for the current parameter $m$, and then substituing the current state $u$, parameter $m$ and adjoint $p$ variables in the weak form expression of the gradient:
+First, we compute the gradient by solving the state and adjoint equation for the current parameter $$m$$, and then substituing the current state $$u$$, parameter $$m$$ and adjoint $$p$$ variables in the weak form expression of the gradient:
 $$ (\mathcal{G}(m), \tilde{m}) = \gamma\int_\Omega \nabla m \cdot \nabla \tilde{m} dx +\int_\Omega \tilde{m}\nabla u \cdot \nabla p\, dx.$$
 
-Then, we compute the Newton direction $\hat m$ by iteratively solving $\mathcal{H} {\hat m} = -\mathcal{G}$.
+Then, we compute the Newton direction $$\hat m$$ by iteratively solving $$\mathcal{H} {\hat m} = -\mathcal{G}$$.
 The Newton system is solved inexactly by early termination of conjugate gradient iterations via Eisenstat–Walker (to prevent oversolving) and Steihaug  (to avoid negative curvature) criteria. 
 
-> Usually, one uses the regularization matrix $R$ as preconditioner for the Hessian system, however since $R$ is singular (the constant vector is in the null space of $R$), here we use $P = R + \frac{\gamma}{10} M$, where $M$ is the mass matrix in parameter space.
+> Usually, one uses the regularization matrix $$R$$ as preconditioner for the Hessian system, however since $$R$$ is singular (the constant vector is in the null space of $$R$$), here we use $$P = R + \frac{\gamma}{10} M$$, where $$M$$ is the mass matrix in parameter space.
 
-Finally, the Armijo line search uses backtracking to find $\alpha$ such that a sufficient reduction in the cost functional is achieved.
-More specifically, we use backtracking to find $\alpha$ such that:
+Finally, the Armijo line search uses backtracking to find $$\alpha$$ such that a sufficient reduction in the cost functional is achieved.
+More specifically, we use backtracking to find $$\alpha$$ such that:
 $$J( m + \alpha \hat m ) \leq J(m) + \alpha c_{\rm armijo} (\hat m,g). $$
 
 
@@ -708,10 +708,10 @@ In particular, we solve
 $$ H_{\rm misfit} \hat{\bf m}_i = \lambda_i R \hat{\bf m}_i. $$
 
 The Figure shows the largest *k* generalized eigenvectors of the Hessian misfit.
-The effective rank of the Hessian misfit is the number of eigenvalues above the red line ($y=1$).
+The effective rank of the Hessian misfit is the number of eigenvalues above the red line ($$y=1$$).
 The effective rank is independent of the mesh size.
 
-> **Note**: Since $R$ is singular (the constant are in the null space of $R$), we will add a small mass matrix $M$ to $R$ and use $P = R + \frac{\gamma}{10}M$ instead.
+> **Note**: Since $$R$$ is singular (the constant are in the null space of $$R$$), we will add a small mass matrix $$M$$ to $$R$$ and use $$P = R + \frac{\gamma}{10}M$$ instead.
 
 
 ```python
