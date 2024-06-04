@@ -23,17 +23,17 @@ for scalable and efficient linear algebra operations and solvers.
 
 ### Teaching material
 
-- Boundary Value Problems in FEniCS: [notebook](notebooks/Poisson.html), [recorded demonstration](https://wustl.box.com/s/5p8dvrxde5o6o6mvhak6t3odsoiz0yqq)
+- Boundary Value Problems in FEniCS: [notebook](notebooks/Poisson.html), [recorded demonstration](https://utexas.box.com/v/intro-to-fenics)
 
 - Image denoising:
-  - Tikhonov regularization: [notebook](notebooks/ImageDenoising_Tik.html), [recorded demonstration](https://wustl.box.com/s/w99ausfyconctd5a6mchx7rtm5y5j5dj)
-  - Total Variation regularization: [notebook](notebooks/ImageDenoising_TV.html), [recorded demonstration](https://wustl.box.com/s/625hd84dpt493rcyap3y35wbakkdr329)
-  - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), [recorded demonstration](https://wustl.box.com/s/zed8kxh34pcaq5ia4suqjjxom4moa6za)
+  - Tikhonov regularization: [notebook](notebooks/ImageDenoising_Tik.html), [recorded demonstration](https://utexas.box.com/v/image-denoising-tik)
+  - Total Variation regularization: [notebook](notebooks/ImageDenoising_TV.html), [recorded demonstration](https://utexas.box.com/v/image-denoising-tv)
+  - Primal-dual Total Variation regularization: [notebook](notebooks/ImageDenoising_PrimalDualTV.html), [recorded demonstration](https://utexas.box.com/v/primal-dual-tv)
 
 - Constrained inverse problems:
-  - Steepest descent: [notebook](notebooks/Poisson_SD.html), [recorded demonstration](https://wustl.box.com/s/39y6f7x4dgb2i574euadoipcjr9339ty)
-  - Inexact Newton Conjugate Gradient: [notebook](notebooks/Poisson_INCG.html),recorded demonstration
-  - Analysis of the spectrum of the Hessian of inverse problem: notebook, recorded demonstration
+  - Steepest descent: [notebook](notebooks/Poisson_SD.html), [recorded demonstration](https://utexas.box.com/v/poisson-steepest-descent)
+  - Inexact Newton Conjugate Gradient: [notebook](notebooks/Poisson_INCG.html),[recorded demonstration](https://utexas.box.com/v/poisson-incg)
+  - Analysis of the spectrum of the Hessian of inverse problem: notebook, [recorded demonstration](https://utexas.box.com/v/hessian-spectrum)
 
 - Bayesian solution of inverse problems:
   - Gaussian random fields: notebook, recorded demonstration
